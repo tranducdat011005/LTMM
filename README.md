@@ -1,4 +1,4 @@
-#LTMM — Cài đặt DES và AES-128
+## LTMM — Cài đặt DES và AES-128
 
 Sinh viên: Trần Đức Đạt
 MSSV: 20233311
@@ -6,7 +6,7 @@ Ngôn ngữ: Python 3.10 trở lên
 
 Bài thực hành cài đặt trực tiếp DES và AES-128, in khóa vòng và trạng thái trung gian, kiểm tra kết quả bằng test vector. Phần thuật toán chỉ sử dụng thư viện chuẩn Python. Mã hóa và giải mã đều được triển khai.
 
-1. Chạy bài
+## 1. Chạy bài
 
 Chạy các lệnh sau từ thư mục chứa "main.py".
 
@@ -29,7 +29,7 @@ python main.py aes --key 000102030405060708090A0B0C0D0E0F --block 00112233445566
 python main.py aes --key 000102030405060708090A0B0C0D0E0F --block 69C4E0D86A7B0430D8CDB78070B4C55A --decrypt
 ```
 
-2. Test vector và kết quả
+## 2. Test vector và kết quả
 
 Mọi số trong bảng là "hex", không phải chuỗi ký tự ASCII.
 
@@ -48,7 +48,7 @@ Nguồn, tính theo số trang của tệp PDF, bao gồm trang bìa:
 - AES ví dụ thứ hai: FIPS 197 bản 2001, Appendix C.1; tài liệu tóm tắt trên dùng bản mã của ví dụ này ở trang 26 để minh họa giải mã.
 - Bảng DES theo [FIPS 46-3](https://csrc.nist.gov/pubs/fips/46-3/final); AES theo [FIPS 197](https://csrc.nist.gov/pubs/fips/197/final). Bản cập nhật AES năm 2023 giữ nguyên thuật toán, bố cục phụ lục khác bản 2001.
 
-3. Các tệp cần xem
+## 3. Các tệp cần xem
 
 | Tệp | Nội dung |
 |---|---|
