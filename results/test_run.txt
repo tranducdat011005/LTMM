@@ -1,0 +1,25 @@
+test_aes_field (__main__.CryptoTests.test_aes_field)
+Kiểm tra phép nhân GF và một cột MixColumns. ... ok
+test_aes_inverse_operations (__main__.CryptoTests.test_aes_inverse_operations)
+Kiểm tra S-box và các phép biến đổi nghịch. ... ok
+test_aes_last_round (__main__.CryptoTests.test_aes_last_round)
+Vòng mã hóa cuối không có MixColumns. ... ok
+test_aes_round_one (__main__.CryptoTests.test_aes_round_one)
+Kiểm tra từng phép biến đổi AES vòng 1. ... ok
+test_des_decryption_key_order (__main__.CryptoTests.test_des_decryption_key_order)
+Giải mã phải dùng K16 trước và K1 cuối. ... ok
+test_des_parity (__main__.CryptoTests.test_des_parity)
+Đổi các bit parity không làm đổi khóa vòng. ... ok
+test_des_round_one (__main__.CryptoTests.test_des_round_one)
+Kiểm tra các giá trị trung gian DES vòng 1. ... ok
+test_invalid_lengths (__main__.CryptoTests.test_invalid_lengths)
+Từ chối khóa hoặc khối sai kích thước. ... ok
+test_known_vectors (__main__.CryptoTests.test_known_vectors)
+Kiểm tra cả mã hóa và giải mã ba vector. ... ok
+test_zero_vectors (__main__.CryptoTests.test_zero_vectors)
+Vector có bản rõ và khóa toàn byte 00. ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.021s
+
+OK

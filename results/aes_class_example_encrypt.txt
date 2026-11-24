@@ -1,0 +1,589 @@
+Vector: aes_class_example
+Source: tom-tat-ly-thuyet-mat-ma-ma-co-dien-va-hien-dai.pdf, trang PDF 20-25; FIPS 197 (2001), Appendix B
+
+AES-128 / encrypt
+Input: 3243F6A8885A308D313198A2E0370734
+Key:   2B7E151628AED2A6ABF7158809CF4F3C
+
+KEY EXPANSION
+w[00] = 2B7E1516
+w[01] = 28AED2A6
+w[02] = ABF71588
+w[03] = 09CF4F3C
+
+Generate w[04]
+  previous = 09CF4F3C
+  RotWord = CF4F3C09
+  SubWord = 8A84EB01
+  Rcon = 01000000
+  temp = 8B84EB01
+  w_i_minus_4 = 2B7E1516
+  word = A0FAFE17
+
+Generate w[05]
+  previous = A0FAFE17
+  temp = A0FAFE17
+  w_i_minus_4 = 28AED2A6
+  word = 88542CB1
+
+Generate w[06]
+  previous = 88542CB1
+  temp = 88542CB1
+  w_i_minus_4 = ABF71588
+  word = 23A33939
+
+Generate w[07]
+  previous = 23A33939
+  temp = 23A33939
+  w_i_minus_4 = 09CF4F3C
+  word = 2A6C7605
+
+Generate w[08]
+  previous = 2A6C7605
+  RotWord = 6C76052A
+  SubWord = 50386BE5
+  Rcon = 02000000
+  temp = 52386BE5
+  w_i_minus_4 = A0FAFE17
+  word = F2C295F2
+
+Generate w[09]
+  previous = F2C295F2
+  temp = F2C295F2
+  w_i_minus_4 = 88542CB1
+  word = 7A96B943
+
+Generate w[10]
+  previous = 7A96B943
+  temp = 7A96B943
+  w_i_minus_4 = 23A33939
+  word = 5935807A
+
+Generate w[11]
+  previous = 5935807A
+  temp = 5935807A
+  w_i_minus_4 = 2A6C7605
+  word = 7359F67F
+
+Generate w[12]
+  previous = 7359F67F
+  RotWord = 59F67F73
+  SubWord = CB42D28F
+  Rcon = 04000000
+  temp = CF42D28F
+  w_i_minus_4 = F2C295F2
+  word = 3D80477D
+
+Generate w[13]
+  previous = 3D80477D
+  temp = 3D80477D
+  w_i_minus_4 = 7A96B943
+  word = 4716FE3E
+
+Generate w[14]
+  previous = 4716FE3E
+  temp = 4716FE3E
+  w_i_minus_4 = 5935807A
+  word = 1E237E44
+
+Generate w[15]
+  previous = 1E237E44
+  temp = 1E237E44
+  w_i_minus_4 = 7359F67F
+  word = 6D7A883B
+
+Generate w[16]
+  previous = 6D7A883B
+  RotWord = 7A883B6D
+  SubWord = DAC4E23C
+  Rcon = 08000000
+  temp = D2C4E23C
+  w_i_minus_4 = 3D80477D
+  word = EF44A541
+
+Generate w[17]
+  previous = EF44A541
+  temp = EF44A541
+  w_i_minus_4 = 4716FE3E
+  word = A8525B7F
+
+Generate w[18]
+  previous = A8525B7F
+  temp = A8525B7F
+  w_i_minus_4 = 1E237E44
+  word = B671253B
+
+Generate w[19]
+  previous = B671253B
+  temp = B671253B
+  w_i_minus_4 = 6D7A883B
+  word = DB0BAD00
+
+Generate w[20]
+  previous = DB0BAD00
+  RotWord = 0BAD00DB
+  SubWord = 2B9563B9
+  Rcon = 10000000
+  temp = 3B9563B9
+  w_i_minus_4 = EF44A541
+  word = D4D1C6F8
+
+Generate w[21]
+  previous = D4D1C6F8
+  temp = D4D1C6F8
+  w_i_minus_4 = A8525B7F
+  word = 7C839D87
+
+Generate w[22]
+  previous = 7C839D87
+  temp = 7C839D87
+  w_i_minus_4 = B671253B
+  word = CAF2B8BC
+
+Generate w[23]
+  previous = CAF2B8BC
+  temp = CAF2B8BC
+  w_i_minus_4 = DB0BAD00
+  word = 11F915BC
+
+Generate w[24]
+  previous = 11F915BC
+  RotWord = F915BC11
+  SubWord = 99596582
+  Rcon = 20000000
+  temp = B9596582
+  w_i_minus_4 = D4D1C6F8
+  word = 6D88A37A
+
+Generate w[25]
+  previous = 6D88A37A
+  temp = 6D88A37A
+  w_i_minus_4 = 7C839D87
+  word = 110B3EFD
+
+Generate w[26]
+  previous = 110B3EFD
+  temp = 110B3EFD
+  w_i_minus_4 = CAF2B8BC
+  word = DBF98641
+
+Generate w[27]
+  previous = DBF98641
+  temp = DBF98641
+  w_i_minus_4 = 11F915BC
+  word = CA0093FD
+
+Generate w[28]
+  previous = CA0093FD
+  RotWord = 0093FDCA
+  SubWord = 63DC5474
+  Rcon = 40000000
+  temp = 23DC5474
+  w_i_minus_4 = 6D88A37A
+  word = 4E54F70E
+
+Generate w[29]
+  previous = 4E54F70E
+  temp = 4E54F70E
+  w_i_minus_4 = 110B3EFD
+  word = 5F5FC9F3
+
+Generate w[30]
+  previous = 5F5FC9F3
+  temp = 5F5FC9F3
+  w_i_minus_4 = DBF98641
+  word = 84A64FB2
+
+Generate w[31]
+  previous = 84A64FB2
+  temp = 84A64FB2
+  w_i_minus_4 = CA0093FD
+  word = 4EA6DC4F
+
+Generate w[32]
+  previous = 4EA6DC4F
+  RotWord = A6DC4F4E
+  SubWord = 2486842F
+  Rcon = 80000000
+  temp = A486842F
+  w_i_minus_4 = 4E54F70E
+  word = EAD27321
+
+Generate w[33]
+  previous = EAD27321
+  temp = EAD27321
+  w_i_minus_4 = 5F5FC9F3
+  word = B58DBAD2
+
+Generate w[34]
+  previous = B58DBAD2
+  temp = B58DBAD2
+  w_i_minus_4 = 84A64FB2
+  word = 312BF560
+
+Generate w[35]
+  previous = 312BF560
+  temp = 312BF560
+  w_i_minus_4 = 4EA6DC4F
+  word = 7F8D292F
+
+Generate w[36]
+  previous = 7F8D292F
+  RotWord = 8D292F7F
+  SubWord = 5DA515D2
+  Rcon = 1B000000
+  temp = 46A515D2
+  w_i_minus_4 = EAD27321
+  word = AC7766F3
+
+Generate w[37]
+  previous = AC7766F3
+  temp = AC7766F3
+  w_i_minus_4 = B58DBAD2
+  word = 19FADC21
+
+Generate w[38]
+  previous = 19FADC21
+  temp = 19FADC21
+  w_i_minus_4 = 312BF560
+  word = 28D12941
+
+Generate w[39]
+  previous = 28D12941
+  temp = 28D12941
+  w_i_minus_4 = 7F8D292F
+  word = 575C006E
+
+Generate w[40]
+  previous = 575C006E
+  RotWord = 5C006E57
+  SubWord = 4A639F5B
+  Rcon = 36000000
+  temp = 7C639F5B
+  w_i_minus_4 = AC7766F3
+  word = D014F9A8
+
+Generate w[41]
+  previous = D014F9A8
+  temp = D014F9A8
+  w_i_minus_4 = 19FADC21
+  word = C9EE2589
+
+Generate w[42]
+  previous = C9EE2589
+  temp = C9EE2589
+  w_i_minus_4 = 28D12941
+  word = E13F0CC8
+
+Generate w[43]
+  previous = E13F0CC8
+  temp = E13F0CC8
+  w_i_minus_4 = 575C006E
+  word = B6630CA6
+
+ROUND KEYS
+K00 = 2B7E151628AED2A6ABF7158809CF4F3C
+K01 = A0FAFE1788542CB123A339392A6C7605
+K02 = F2C295F27A96B9435935807A7359F67F
+K03 = 3D80477D4716FE3E1E237E446D7A883B
+K04 = EF44A541A8525B7FB671253BDB0BAD00
+K05 = D4D1C6F87C839D87CAF2B8BC11F915BC
+K06 = 6D88A37A110B3EFDDBF98641CA0093FD
+K07 = 4E54F70E5F5FC9F384A64FB24EA6DC4F
+K08 = EAD27321B58DBAD2312BF5607F8D292F
+K09 = AC7766F319FADC2128D12941575C006E
+K10 = D014F9A8C9EE2589E13F0CC8B6630CA6
+
+STATES
+Hex strings: read column by column.
+Matrices below: displayed row by row.
+For decryption, round/key-index decreases from 10 to 0.
+
+Round/key-index 00 - Input
+  HEX = 3243F6A8885A308D313198A2E0370734
+  32 88 31 E0
+  43 5A 31 37
+  F6 30 98 07
+  A8 8D A2 34
+
+Round/key-index 00 - AddRoundKey
+  HEX = 193DE3BEA0F4E22B9AC68D2AE9F84808
+  19 A0 9A E9
+  3D F4 C6 F8
+  E3 E2 8D 48
+  BE 2B 2A 08
+
+Round/key-index 01 - SubBytes
+  HEX = D42711AEE0BF98F1B8B45DE51E415230
+  D4 E0 B8 1E
+  27 BF B4 41
+  11 98 5D 52
+  AE F1 E5 30
+
+Round/key-index 01 - ShiftRows
+  HEX = D4BF5D30E0B452AEB84111F11E2798E5
+  D4 E0 B8 1E
+  BF B4 41 27
+  5D 52 11 98
+  30 AE F1 E5
+
+Round/key-index 01 - MixColumns
+  HEX = 046681E5E0CB199A48F8D37A2806264C
+  04 E0 48 28
+  66 CB F8 06
+  81 19 D3 26
+  E5 9A 7A 4C
+
+Round/key-index 01 - AddRoundKey
+  HEX = A49C7FF2689F352B6B5BEA43026A5049
+  A4 68 6B 02
+  9C 9F 5B 6A
+  7F 35 EA 50
+  F2 2B 43 49
+
+Round/key-index 02 - SubBytes
+  HEX = 49DED28945DB96F17F39871A7702533B
+  49 45 7F 77
+  DE DB 39 02
+  D2 96 87 53
+  89 F1 1A 3B
+
+Round/key-index 02 - ShiftRows
+  HEX = 49DB873B453953897F02D2F177DE961A
+  49 45 7F 77
+  DB 39 02 DE
+  87 53 D2 96
+  3B 89 F1 1A
+
+Round/key-index 02 - MixColumns
+  HEX = 584DCAF11B4B5AACDBE7CAA81B6BB0E5
+  58 1B DB 1B
+  4D 4B E7 6B
+  CA 5A CA B0
+  F1 AC A8 E5
+
+Round/key-index 02 - AddRoundKey
+  HEX = AA8F5F0361DDE3EF82D24AD26832469A
+  AA 61 82 68
+  8F DD D2 32
+  5F E3 4A 46
+  03 EF D2 9A
+
+Round/key-index 03 - SubBytes
+  HEX = AC73CF7BEFC111DF13B5D6B545235AB8
+  AC EF 13 45
+  73 C1 B5 23
+  CF 11 D6 5A
+  7B DF B5 B8
+
+Round/key-index 03 - ShiftRows
+  HEX = ACC1D6B8EFB55A7B1323CFDF457311B5
+  AC EF 13 45
+  C1 B5 23 73
+  D6 5A CF 11
+  B8 7B DF B5
+
+Round/key-index 03 - MixColumns
+  HEX = 75EC0993200B633353C0CF7CBB25D0DC
+  75 20 53 BB
+  EC 0B C0 25
+  09 63 CF D0
+  93 33 7C DC
+
+Round/key-index 03 - AddRoundKey
+  HEX = 486C4EEE671D9D0D4DE3B138D65F58E7
+  48 67 4D D6
+  6C 1D E3 5F
+  4E 9D B1 58
+  EE 0D 38 E7
+
+Round/key-index 04 - SubBytes
+  HEX = 52502F2885A45ED7E311C807F6CF6A94
+  52 85 E3 F6
+  50 A4 11 CF
+  2F 5E C8 6A
+  28 D7 07 94
+
+Round/key-index 04 - ShiftRows
+  HEX = 52A4C89485116A28E3CF2FD7F6505E07
+  52 85 E3 F6
+  A4 11 CF 50
+  C8 6A 2F 5E
+  94 28 D7 07
+
+Round/key-index 04 - MixColumns
+  HEX = 0FD6DAA9603138BF6FC0106B5EB31301
+  0F 60 6F 5E
+  D6 31 C0 B3
+  DA 38 10 13
+  A9 BF 6B 01
+
+Round/key-index 04 - AddRoundKey
+  HEX = E0927FE8C86363C0D9B1355085B8BE01
+  E0 C8 D9 85
+  92 63 B1 B8
+  7F 63 35 BE
+  E8 C0 50 01
+
+Round/key-index 05 - SubBytes
+  HEX = E14FD29BE8FBFBBA35C89653976CAE7C
+  E1 E8 35 97
+  4F FB C8 6C
+  D2 FB 96 AE
+  9B BA 53 7C
+
+Round/key-index 05 - ShiftRows
+  HEX = E1FB967CE8C8AE9B356CD2BA974FFB53
+  E1 E8 35 97
+  FB C8 6C 4F
+  96 AE D2 FB
+  7C 9B BA 53
+
+Round/key-index 05 - MixColumns
+  HEX = 25D1A9ADBD11D168B63A338E4C4CC0B0
+  25 BD B6 4C
+  D1 11 3A 4C
+  A9 D1 33 C0
+  AD 68 8E B0
+
+Round/key-index 05 - AddRoundKey
+  HEX = F1006F55C1924CEF7CC88B325DB5D50C
+  F1 C1 7C 5D
+  00 92 C8 B5
+  6F 4C 8B D5
+  55 EF 32 0C
+
+Round/key-index 06 - SubBytes
+  HEX = A163A8FC784F29DF10E83D234CD503FE
+  A1 78 10 4C
+  63 4F E8 D5
+  A8 29 3D 03
+  FC DF 23 FE
+
+Round/key-index 06 - ShiftRows
+  HEX = A14F3DFE78E803FC10D5A8DF4C632923
+  A1 78 10 4C
+  4F E8 D5 63
+  3D 03 A8 29
+  FE FC DF 23
+
+Round/key-index 06 - MixColumns
+  HEX = 4B868D6D2C4A8980339DF4E837D218D8
+  4B 2C 33 37
+  86 4A 9D D2
+  8D 89 F4 18
+  6D 80 E8 D8
+
+Round/key-index 06 - AddRoundKey
+  HEX = 260E2E173D41B77DE86472A9FDD28B25
+  26 3D E8 FD
+  0E 41 64 D2
+  2E B7 72 8B
+  17 7D A9 25
+
+Round/key-index 07 - SubBytes
+  HEX = F7AB31F02783A9FF9B4340D354B53D3F
+  F7 27 9B 54
+  AB 83 43 B5
+  31 A9 40 3D
+  F0 FF D3 3F
+
+Round/key-index 07 - ShiftRows
+  HEX = F783403F27433DF09BB531FF54ABA9D3
+  F7 27 9B 54
+  83 43 B5 AB
+  40 3D 31 A9
+  3F F0 FF D3
+
+Round/key-index 07 - MixColumns
+  HEX = 1415B5BF461615EC274656D7342AD843
+  14 46 27 34
+  15 16 46 2A
+  B5 15 56 D8
+  BF EC D7 43
+
+Round/key-index 07 - AddRoundKey
+  HEX = 5A4142B11949DC1FA3E019657A8C040C
+  5A 19 A3 7A
+  41 49 E0 8C
+  42 DC 19 04
+  B1 1F 65 0C
+
+Round/key-index 08 - SubBytes
+  HEX = BE832CC8D43B86C00AE1D44DDA64F2FE
+  BE D4 0A DA
+  83 3B E1 64
+  2C 86 D4 F2
+  C8 C0 4D FE
+
+Round/key-index 08 - ShiftRows
+  HEX = BE3BD4FED4E1F2C80A642CC0DA83864D
+  BE D4 0A DA
+  3B E1 64 83
+  D4 F2 2C 86
+  FE C8 C0 4D
+
+Round/key-index 08 - MixColumns
+  HEX = 00512FD1B1C889FF54766DCDFA1B99EA
+  00 B1 54 FA
+  51 C8 76 1B
+  2F 89 6D 99
+  D1 FF CD EA
+
+Round/key-index 08 - AddRoundKey
+  HEX = EA835CF00445332D655D98AD8596B0C5
+  EA 04 65 85
+  83 45 5D 96
+  5C 33 98 B0
+  F0 2D AD C5
+
+Round/key-index 09 - SubBytes
+  HEX = 87EC4A8CF26EC3D84D4C46959790E7A6
+  87 F2 4D 97
+  EC 6E 4C 90
+  4A C3 46 E7
+  8C D8 95 A6
+
+Round/key-index 09 - ShiftRows
+  HEX = 876E46A6F24CE78C4D904AD897ECC395
+  87 F2 4D 97
+  6E 4C 90 EC
+  46 E7 4A C3
+  A6 8C D8 95
+
+Round/key-index 09 - MixColumns
+  HEX = 473794ED40D4E4A5A3703AA64C9F42BC
+  47 40 A3 4C
+  37 D4 70 9F
+  94 E4 3A 42
+  ED A5 A6 BC
+
+Round/key-index 09 - AddRoundKey
+  HEX = EB40F21E592E38848BA113E71BC342D2
+  EB 59 8B 1B
+  40 2E A1 C3
+  F2 38 13 42
+  1E 84 E7 D2
+
+Round/key-index 10 - SubBytes
+  HEX = E9098972CB31075F3D327D94AF2E2CB5
+  E9 CB 3D AF
+  09 31 32 2E
+  89 07 7D 2C
+  72 5F 94 B5
+
+Round/key-index 10 - ShiftRows
+  HEX = E9317DB5CB322C723D2E895FAF090794
+  E9 CB 3D AF
+  31 32 2E 09
+  7D 2C 89 07
+  B5 72 5F 94
+
+Round/key-index 10 - AddRoundKey
+  HEX = 3925841D02DC09FBDC118597196A0B32
+  39 02 DC 19
+  25 DC 11 6A
+  84 09 85 0B
+  1D FB 97 32
+
+Output = 3925841D02DC09FBDC118597196A0B32

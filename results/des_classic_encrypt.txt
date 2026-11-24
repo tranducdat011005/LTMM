@@ -1,0 +1,322 @@
+Vector: des_classic
+Source: tong-hop-tai-lieu-cuoi-ky-math-101-gcd-modular-arithmetic-cryptography.pdf, trang PDF 10-17
+
+DES / encrypt
+Input: 0123456789ABCDEF
+Key:   133457799BBCDFF1
+
+KEY SCHEDULE
+PC1 = F0CCAAF556678F
+C0  = F0CCAAF
+D0  = 556678F
+K01: shift=1 C=E19955F D=AACCF1E K=1B02EFFC7072
+K02: shift=1 C=C332ABF D=5599E3D K=79AED9DBC9E5
+K03: shift=2 C=0CCAAFF D=56678F5 K=55FC8A42CF99
+K04: shift=2 C=332ABFC D=599E3D5 K=72ADD6DB351D
+K05: shift=2 C=CCAAFF0 D=6678F55 K=7CEC07EB53A8
+K06: shift=2 C=32ABFC3 D=99E3D55 K=63A53E507B2F
+K07: shift=2 C=CAAFF0C D=678F556 K=EC84B7F618BC
+K08: shift=2 C=2ABFC33 D=9E3D559 K=F78A3AC13BFB
+K09: shift=1 C=557F866 D=3C7AAB3 K=E0DBEBEDE781
+K10: shift=2 C=55FE199 D=F1EAACC K=B1F347BA464F
+K11: shift=2 C=57F8665 D=C7AAB33 K=215FD3DED386
+K12: shift=2 C=5FE1995 D=1EAACCF K=7571F59467E9
+K13: shift=2 C=7F86655 D=7AAB33C K=97C5D1FABA41
+K14: shift=2 C=FE19955 D=EAACCF1 K=5F43B7F2E73A
+K15: shift=2 C=F866557 D=AAB33C7 K=BF918D3D3F0A
+K16: shift=1 C=F0CCAAF D=556678F K=CB3D8B0E17F5
+
+IP = CC00CCFFF0AAF0AA
+L0 = CC00CCFF
+R0 = F0AAF0AA
+
+ROUND 01 (using K01=1B02EFFC7072)
+  L_in = CC00CCFF
+  R_in = F0AAF0AA
+  E = 7A15557A1555
+  xor_key = 6117BA866527
+  S1: bits=011000 row=0 column=12 output=5
+  S2: bits=010001 row=1 column=8 output=C
+  S3: bits=011110 row=0 column=15 output=8
+  S4: bits=111010 row=2 column=13 output=2
+  S5: bits=100001 row=3 column=0 output=B
+  S6: bits=100110 row=2 column=3 output=5
+  S7: bits=010100 row=0 column=10 output=9
+  S8: bits=100111 row=3 column=3 output=7
+  S = 5C82B597
+  P = 234AA9BB
+  L = F0AAF0AA
+  R = EF4A6544
+
+ROUND 02 (using K02=79AED9DBC9E5)
+  L_in = F0AAF0AA
+  R_in = EF4A6544
+  E = 75EA5430AA09
+  xor_key = 0C448DEB63EC
+  S1: bits=000011 row=1 column=1 output=F
+  S2: bits=000100 row=0 column=2 output=8
+  S3: bits=010010 row=0 column=9 output=D
+  S4: bits=001101 row=1 column=6 output=0
+  S5: bits=111010 row=2 column=13 output=3
+  S6: bits=110110 row=2 column=11 output=A
+  S7: bits=001111 row=1 column=7 output=A
+  S8: bits=101100 row=2 column=6 output=E
+  S = F8D03AAE
+  P = 3CAB87A3
+  L = EF4A6544
+  R = CC017709
+
+ROUND 03 (using K03=55FC8A42CF99)
+  L_in = EF4A6544
+  R_in = CC017709
+  E = E58002BAE853
+  xor_key = B07C88F827CA
+  S1: bits=101100 row=2 column=6 output=2
+  S2: bits=000111 row=1 column=3 output=7
+  S3: bits=110010 row=2 column=9 output=1
+  S4: bits=001000 row=0 column=4 output=0
+  S5: bits=111110 row=2 column=15 output=E
+  S6: bits=000010 row=0 column=1 output=1
+  S7: bits=011111 row=1 column=15 output=6
+  S8: bits=001010 row=0 column=5 output=F
+  S = 2710E16F
+  P = 4D166EB0
+  L = CC017709
+  R = A25C0BF4
+
+ROUND 04 (using K04=72ADD6DB351D)
+  L_in = CC017709
+  R_in = A25C0BF4
+  E = 5042F8057FA9
+  xor_key = 22EF2EDE4AB4
+  S1: bits=001000 row=0 column=4 output=2
+  S2: bits=101110 row=2 column=7 output=1
+  S3: bits=111100 row=2 column=14 output=E
+  S4: bits=101110 row=2 column=7 output=D
+  S5: bits=110111 row=3 column=11 output=9
+  S6: bits=100100 row=2 column=2 output=F
+  S7: bits=101010 row=2 column=5 output=3
+  S8: bits=110100 row=2 column=10 output=A
+  S = 21ED9F3A
+  P = BB23774C
+  L = A25C0BF4
+  R = 77220045
+
+ROUND 05 (using K05=7CEC07EB53A8)
+  L_in = A25C0BF4
+  R_in = 77220045
+  E = BAE90400020A
+  xor_key = C60503EB51A2
+  S1: bits=110001 row=3 column=8 output=5
+  S2: bits=100000 row=2 column=0 output=0
+  S3: bits=010100 row=0 column=10 output=C
+  S4: bits=000011 row=1 column=1 output=8
+  S5: bits=111010 row=2 column=13 output=3
+  S6: bits=110101 row=3 column=10 output=1
+  S7: bits=000110 row=0 column=3 output=E
+  S8: bits=100010 row=2 column=1 output=B
+  S = 50C831EB
+  P = 2813ADC3
+  L = 77220045
+  R = 8A4FA637
+
+ROUND 06 (using K06=63A53E507B2F)
+  L_in = 77220045
+  R_in = 8A4FA637
+  E = C5425FD0C1AF
+  xor_key = A6E76180BA80
+  S1: bits=101001 row=3 column=4 output=4
+  S2: bits=101110 row=2 column=7 output=1
+  S3: bits=011101 row=1 column=14 output=F
+  S4: bits=100001 row=3 column=0 output=3
+  S5: bits=100000 row=2 column=0 output=4
+  S6: bits=001011 row=1 column=5 output=C
+  S7: bits=101010 row=2 column=5 output=3
+  S8: bits=000000 row=0 column=0 output=D
+  S = 41F34C3D
+  P = 9E45CD2C
+  L = 8A4FA637
+  R = E967CD69
+
+ROUND 07 (using K07=EC84B7F618BC)
+  L_in = 8A4FA637
+  R_in = E967CD69
+  E = F52B0FE5AB53
+  xor_key = 19AFB813B3EF
+  S1: bits=000110 row=0 column=3 output=1
+  S2: bits=011010 row=0 column=13 output=0
+  S3: bits=111110 row=2 column=15 output=7
+  S4: bits=111000 row=2 column=12 output=5
+  S5: bits=000100 row=0 column=2 output=4
+  S6: bits=111011 row=3 column=13 output=0
+  S7: bits=001111 row=1 column=7 output=A
+  S8: bits=101111 row=3 column=7 output=D
+  S = 107540AD
+  P = 8C051C27
+  L = E967CD69
+  R = 064ABA10
+
+ROUND 08 (using K08=F78A3AC13BFB)
+  L_in = E967CD69
+  R_in = 064ABA10
+  E = 00C2555F40A0
+  xor_key = F7486F9E7B5B
+  S1: bits=111101 row=3 column=14 output=6
+  S2: bits=110100 row=2 column=10 output=C
+  S3: bits=100001 row=3 column=0 output=1
+  S4: bits=101111 row=3 column=7 output=8
+  S5: bits=100111 row=3 column=3 output=7
+  S6: bits=100111 row=3 column=3 output=C
+  S7: bits=101101 row=3 column=6 output=A
+  S8: bits=011011 row=1 column=13 output=E
+  S = 6C187CAE
+  P = 3C0E86F9
+  L = 064ABA10
+  R = D5694B90
+
+ROUND 09 (using K09=E0DBEBEDE781)
+  L_in = 064ABA10
+  R_in = D5694B90
+  E = 6AAB52A57CA1
+  xor_key = 8A70B9489B20
+  S1: bits=100010 row=2 column=1 output=1
+  S2: bits=100111 row=3 column=3 output=1
+  S3: bits=000010 row=0 column=1 output=0
+  S4: bits=111001 row=3 column=12 output=C
+  S5: bits=010010 row=0 column=9 output=5
+  S6: bits=001001 row=1 column=4 output=7
+  S7: bits=101100 row=2 column=6 output=7
+  S8: bits=100000 row=2 column=0 output=7
+  S = 110C5777
+  P = 22367C6A
+  L = D5694B90
+  R = 247CC67A
+
+ROUND 10 (using K10=B1F347BA464F)
+  L_in = D5694B90
+  R_in = 247CC67A
+  E = 1083F960C3F4
+  xor_key = A170BEDA85BB
+  S1: bits=101000 row=2 column=4 output=D
+  S2: bits=010111 row=1 column=11 output=A
+  S3: bits=000010 row=0 column=1 output=0
+  S4: bits=111110 row=2 column=15 output=4
+  S5: bits=110110 row=2 column=11 output=5
+  S6: bits=101000 row=2 column=4 output=2
+  S7: bits=010110 row=0 column=11 output=7
+  S8: bits=111011 row=3 column=13 output=5
+  S = DA045275
+  P = 62BC9C22
+  L = 247CC67A
+  R = B7D5D7B2
+
+ROUND 11 (using K11=215FD3DED386)
+  L_in = 247CC67A
+  R_in = B7D5D7B2
+  E = 5AFEABEAFDA5
+  xor_key = 7BA178342E23
+  S1: bits=011110 row=0 column=15 output=7
+  S2: bits=111010 row=2 column=13 output=3
+  S3: bits=000101 row=1 column=2 output=0
+  S4: bits=111000 row=2 column=12 output=5
+  S5: bits=001101 row=1 column=6 output=D
+  S6: bits=000010 row=0 column=1 output=1
+  S7: bits=111000 row=2 column=12 output=0
+  S8: bits=100011 row=3 column=1 output=1
+  S = 7305D101
+  P = E104FA02
+  L = B7D5D7B2
+  R = C5783C78
+
+ROUND 12 (using K12=7571F59467E9)
+  L_in = B7D5D7B2
+  R_in = C5783C78
+  E = 60ABF01F83F1
+  xor_key = 15DA058BE418
+  S1: bits=000101 row=1 column=2 output=7
+  S2: bits=011101 row=1 column=14 output=B
+  S3: bits=101000 row=2 column=4 output=8
+  S4: bits=000101 row=1 column=2 output=B
+  S5: bits=100010 row=2 column=1 output=2
+  S6: bits=111110 row=2 column=15 output=6
+  S7: bits=010000 row=0 column=8 output=3
+  S8: bits=011000 row=0 column=12 output=5
+  S = 7B8B2635
+  P = C268CFEA
+  L = C5783C78
+  R = 75BD1858
+
+ROUND 13 (using K13=97C5D1FABA41)
+  L_in = C5783C78
+  R_in = 75BD1858
+  E = 3ABDFA8F02F0
+  xor_key = AD782B75B8B1
+  S1: bits=101011 row=3 column=5 output=9
+  S2: bits=010111 row=1 column=11 output=A
+  S3: bits=100000 row=2 column=0 output=D
+  S4: bits=101011 row=3 column=5 output=1
+  S5: bits=011101 row=1 column=14 output=8
+  S6: bits=011011 row=1 column=13 output=B
+  S7: bits=100010 row=2 column=1 output=4
+  S8: bits=110001 row=3 column=8 output=F
+  S = 9AD18B4F
+  P = DDBB2922
+  L = 75BD1858
+  R = 18C3155A
+
+ROUND 14 (using K14=5F43B7F2E73A)
+  L_in = 75BD1858
+  R_in = 18C3155A
+  E = 0F16068AAAF4
+  xor_key = 5055B1784DCE
+  S1: bits=010100 row=0 column=10 output=6
+  S2: bits=000101 row=1 column=2 output=4
+  S3: bits=010110 row=0 column=11 output=7
+  S4: bits=110001 row=3 column=8 output=9
+  S5: bits=011110 row=0 column=15 output=9
+  S6: bits=000100 row=0 column=2 output=A
+  S7: bits=110111 row=3 column=11 output=F
+  S8: bits=001110 row=0 column=7 output=1
+  S = 64799AF1
+  P = B7318E55
+  L = 18C3155A
+  R = C28C960D
+
+ROUND 15 (using K15=BF918D3D3F0A)
+  L_in = 18C3155A
+  R_in = C28C960D
+  E = E054594AC05B
+  xor_key = 5FC5D477FF51
+  S1: bits=010111 row=1 column=11 output=B
+  S2: bits=111100 row=2 column=14 output=2
+  S3: bits=010111 row=1 column=11 output=E
+  S4: bits=010100 row=0 column=10 output=8
+  S5: bits=011101 row=1 column=14 output=8
+  S6: bits=111111 row=3 column=15 output=D
+  S7: bits=111101 row=3 column=14 output=3
+  S8: bits=010001 row=1 column=8 output=C
+  S = B2E88D3C
+  P = 5B81276E
+  L = C28C960D
+  R = 43423234
+
+ROUND 16 (using K16=CB3D8B0E17F5)
+  L_in = C28C960D
+  R_in = 43423234
+  E = 206A041A41A8
+  xor_key = EB578F14565D
+  S1: bits=111010 row=2 column=13 output=A
+  S2: bits=110101 row=3 column=10 output=7
+  S3: bits=011110 row=0 column=15 output=8
+  S4: bits=001111 row=1 column=7 output=3
+  S5: bits=000101 row=1 column=2 output=2
+  S6: bits=000101 row=1 column=2 output=4
+  S7: bits=011001 row=1 column=12 output=2
+  S8: bits=011101 row=1 column=14 output=9
+  S = A7832429
+  P = C8C04F98
+  L = 43423234
+  R = 0A4CD995
+
+R16 || L16 = 0A4CD99543423234
+Output = 85E813540F0AB405
